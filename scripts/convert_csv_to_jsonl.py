@@ -21,12 +21,29 @@ def clean(v):
 def material_id(bh, bp, bd) -> str:
     bh = clean(bh) or "NA"
     bp = (clean(bp) or "NA").replace(",", ".")
-    try: bp = ("%g" % float(bp))  # 37.120 -> 37.12
+    try: bp = ("%g" % float(bp))
     except Exception: pass
     bp = str(bp).replace(".", "_")
     bd = clean(bd) or "NA"
     bd = bd.zfill(3) if str(bd).isdigit() else bd
     return f"{bh}_{bp}_{bd}"
+
+def load_onderdelen_map(root: Path) -> dict:
+    m = {}
+    p = root / "onderdelen.jsonl"
+    if not p.exists():
+        return m
+    for ln in p.read_text(encoding="utf-8").splitlines():
+        ln = ln.strip()
+        if not ln: 
+            continue
+        o = json.loads(ln)
+        oid = str(o.get("onderdeel_id", "")).strip()
+        inp = str(o.get("input_dronescan", "")).strip().upper()
+        cat = str(o.get("categorie", "")).strip().upper()
+        if oid and inp and cat:
+            m[(inp, cat)] = oid
+    return m
 
 def main():
     if len(sys.argv) < 2:
@@ -36,16 +53,25 @@ def main():
     src = Path(sys.argv[1])
     out = Path(sys.argv[2]) if len(sys.argv) > 2 else src.with_suffix(".jsonl")
 
+    root = Path(__file__).resolve().parents[1]
+    omap = load_onderdelen_map(root)
+
     with src.open("r", encoding="utf-8-sig", newline="") as f_in, out.open("w", encoding="utf-8") as f_out:
         r = csv.DictReader(f_in, delimiter=";")
-        keys = r.fieldnames or []
-        keymap = {k: snake(k) for k in keys}
+        keymap = {k: snake(k) for k in (r.fieldnames or [])}
 
         for row in r:
             obj = {keymap[k]: clean(v) for k, v in row.items() if k is not None}
             mid = material_id(obj.get("bh"), obj.get("bp"), obj.get("bd"))
-            obj.pop("material_id", None)  # voorkom dubbele key
-            out_obj = {"material_id": mid}
+
+            inp = (obj.get("input_dronescan") or "").strip().upper()
+            cat = (obj.get("categorie") or "").strip().upper()
+            onderdeel_id = omap.get((inp, cat))
+
+            obj.pop("material_id", None)
+            obj.pop("onderdeel_id", None)
+
+            out_obj = {"material_id": mid, "onderdeel_id": onderdeel_id}
             out_obj.update(obj)
             f_out.write(json.dumps(out_obj, ensure_ascii=False) + "\n")
 
