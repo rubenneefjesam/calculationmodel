@@ -17,8 +17,9 @@ python scripts/convert_csv_to_jsonl.py data/gebouwdata/gebouwgegevens.csv data/g
 
 
 ## 2) Scenario’s genereren
+python scripts/generate_scenarios.py --max-scenarios 10000
 
-python scripts/generate_scenarios.py \
+
   --materials data/bronddata/materials.jsonl \
   --out data/output/scenarios.jsonl
 
@@ -41,13 +42,8 @@ python scripts/compute_results.py \
 
 ## 4) Top resultaten bekijken
 
-python scripts/rank_results.py \
-  --results data/output/scenario_results_gebouw_1.jsonl
+./scripts/show_results.sh 1
 
-Top 10:
-python scripts/rank_results.py \
-  --results data/output/scenario_results_gebouw_1.jsonl \
-  --top 10
 
 
 ## 5) 1 scenario detailberekening tonen

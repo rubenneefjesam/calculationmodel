@@ -1,122 +1,176 @@
 #!/usr/bin/env python3
-# scripts/compute_results.py
 #
-# Verwacht scenario-formaat:
-#   {"scenario_id":1,"keuzes":{"01":"34_33_10_010","02":"NONE",...}}
+# compute_results.py
+#
+# Gebruik:
+#   python scripts/compute_results.py --gebouw 1
+#
 
-import argparse, json
+import argparse
+import json
 from pathlib import Path
 
-M2_COL = {
-    "VASTGLAS": "VASTGLAS_m2",
-    "METSELWERK": "METSELWERK_m2",
-    "DAKOPPERVLAK": "DAKOPPERVLAK_m2",
-    "VLOER/BODEM": "VLOER_BODEM_m2",
-    "VLOER_BODEM": "VLOER_BODEM_m2",
-}
-M1_COL = {"KOZIJNEN": "KOZIJNEN_m1"}
-STUK_COL = {"DEUR": "DEUR_stuks"}
+
+TOP_N = 10
+
+
+# -----------------------------
+# Helpers
+# -----------------------------
 
 def read_jsonl(path: Path):
+    if not path.exists():
+        raise FileNotFoundError(f"Bestand niet gevonden: {path}")
+
     with path.open("r", encoding="utf-8") as f:
-        for ln in f:
-            ln = ln.strip()
-            if ln:
-                yield json.loads(ln)
+        for line in f:
+            if line.strip():
+                yield json.loads(line)
 
-def fnum(x, default=0.0):
-    if x is None: return default
-    if isinstance(x, (int, float)): return float(x)
-    try: return float(str(x).strip().replace(",", "."))
-    except Exception: return default
 
-def qty(building, mat):
-    enh = str(mat.get("enh", "")).strip().lower()
-    drone = str(mat.get("input_dronescan", "")).strip().upper()
+def read_materials_lookup(path: Path):
+    lookup = {}
 
-    if enh == "m2":
-        col = M2_COL.get(drone, f"{drone.replace('/','_')}_m2")
-        return fnum(building.get(col), 0.0)
+    for m in read_jsonl(path):
+        material_id = m.get("material_id")
+        if not material_id:
+            continue
 
-    if enh == "m1":
-        col = M1_COL.get(drone, f"{drone.replace('/','_')}_m1")
-        return fnum(building.get(col), 0.0)
+        lookup[material_id] = {
+            "prijs": float(m.get("prijs_norm") or 0),
+            "co2": float(m.get("mg_co2_m2") or 0),
+            "categorie": m.get("categorie"),
+            "enh": (m.get("enh") or "").lower()
+        }
 
-    if enh in ("stuk", "stuks"):
-        if drone in STUK_COL:
-            return fnum(building.get(STUK_COL[drone]), 0.0)
-        col = f"{drone.replace('/','_')}_stuks"
-        v = building.get(col)
-        return fnum(v, 1.0) if v is not None else 1.0
+    return lookup
 
-    return 0.0
 
-def mg_per_unit(mat):
-    enh = str(mat.get("enh", "")).strip().lower()
-    if enh == "m2": return fnum(mat.get("mg_co2_m2"), 0.0)
-    if enh in ("stuk", "stuks"): return fnum(mat.get("mg_co2_stuk"), 0.0)
-    if enh == "m1": return fnum(mat.get("mg_co2_m1"), 0.0)
-    return 0.0
-
-def load_building(buildings_path: Path, gebouw_id: int):
-    for b in read_jsonl(buildings_path):
-        gid = b.get("gebouw_id", b.get("id", b.get("building_id")))
-        if gid == gebouw_id:
-            return b
+def read_gebouw(path: Path, gebouw_id: int):
+    for g in read_jsonl(path):
+        if g.get("gebouw_id") == gebouw_id:
+            return g
     return None
 
+
+def update_top_list(lst, record, key, reverse=False):
+    lst.append(record)
+    lst.sort(key=lambda x: x[key], reverse=reverse)
+    if len(lst) > TOP_N:
+        lst.pop()
+
+
+def bepaal_factor(materiaal, gebouw):
+    categorie = materiaal["categorie"]
+
+    mapping = {
+        "Beglazing": "VASTGLAS_m2",
+        "Gevelisolatie": "METSELWERK_m2",
+        "Plat dakisolatie": "DAKOPPERVLAK_m2",
+        "Hellend dakisolatie": "DAKOPPERVLAK_m2",
+        "Vloerisolatie": "VLOER_BODEM_m2",
+        "Deur": "DEUR_stuks",
+        "Kozijnen": "KOZIJNEN_m1"
+    }
+
+    veld = mapping.get(categorie)
+
+    if veld and veld in gebouw:
+        return float(gebouw.get(veld) or 0)
+
+    # alles zonder oppervlak/stuks → factor = 1
+    return 1.0
+
+
+# -----------------------------
+# Main
+# -----------------------------
+
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--materials", default="materials.jsonl")
-    ap.add_argument("--scenarios", default="scenarios.jsonl")
-    ap.add_argument("--buildings", default="gebouwgegevens.jsonl")
-    ap.add_argument("--gebouw-id", type=int, required=True)
-    ap.add_argument("--out", default=None)
-    ap.add_argument("--max-scenarios", type=int, default=None)
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--gebouw", type=int, required=True)
+    args = parser.parse_args()
 
-    mats = {}
-    for m in read_jsonl(Path(args.materials)):
-        mid = m.get("material_id")
-        if mid:
-            mats[str(mid).strip()] = m
+    root = Path(__file__).resolve().parents[1]
 
-    building = load_building(Path(args.buildings), args.gebouw_id)
-    if building is None:
-        raise SystemExit(f"Geen gebouw gevonden met gebouw_id={args.gebouw_id} in {args.buildings}")
+    scenarios_path = root / "data" / "output" / "scenarios.jsonl"
+    materials_path = root / "data" / "brondata" / "materials.jsonl"
+    gebouw_path = root / "data" / "gebouwdata" / "gebouwgegevens.jsonl"
 
-    out_path = Path(args.out) if args.out else Path(f"scenario_results_gebouw_{args.gebouw_id}.jsonl")
+    output_path = root / "data" / "output" / f"results_summary_gebouw_{args.gebouw}.json"
 
-    with out_path.open("w", encoding="utf-8") as f_out:
-        n = 0
-        for scen in read_jsonl(Path(args.scenarios)):
-            n += 1
-            if args.max_scenarios and n > args.max_scenarios:
-                break
+    print("Laden materialen...")
+    material_lookup = read_materials_lookup(materials_path)
 
-            sid = scen.get("scenario_id")
-            keuzes = scen.get("keuzes") or {}
+    print("Laden gebouw...")
+    gebouw = read_gebouw(gebouw_path, args.gebouw)
 
-            selected_ids = [v for v in keuzes.values() if v and v != "NONE"]
+    if not gebouw:
+        print(f"Gebouw {args.gebouw} niet gevonden.")
+        return
 
-            cost_total = 0.0
-            mg_total = 0.0
-            for mid in selected_ids:
-                mat = mats.get(str(mid).strip())
-                if not mat:
-                    continue
-                q = qty(building, mat)
-                cost_total += fnum(mat.get("prijs_norm"), 0.0) * q
-                mg_total += mg_per_unit(mat) * q
+    goedkoopste = []
+    duurste = []
+    laagste_co2 = []
 
-            f_out.write(json.dumps({
-                "gebouw_id": args.gebouw_id,
-                "scenario_id": sid,
-                "cost_total": int(round(cost_total)),
-                "mg_co2_total": int(round(mg_total)),
-            }, ensure_ascii=False) + "\n")
+    scenario_count = 0
 
-    print(f"OK -> {out_path}")
+    print("Start berekening...")
+
+    for scenario in read_jsonl(scenarios_path):
+
+        scenario_id = scenario["scenario_id"]
+        keuzes = scenario["keuzes"]
+
+        totaal_prijs = 0.0
+        totaal_co2 = 0.0
+
+        for material_id in keuzes.values():
+            if material_id == "NONE":
+                continue
+
+            m = material_lookup.get(material_id)
+            if not m:
+                continue
+
+            factor = bepaal_factor(m, gebouw)
+
+            totaal_prijs += m["prijs"] * factor
+            totaal_co2 += m["co2"] * factor
+
+        record = {
+            "scenario_id": scenario_id,
+            "totaal_prijs": round(totaal_prijs, 2),
+            "totaal_co2": round(totaal_co2, 2)
+        }
+
+        update_top_list(goedkoopste, record, "totaal_prijs", reverse=False)
+        update_top_list(duurste, record, "totaal_prijs", reverse=True)
+        update_top_list(laagste_co2, record, "totaal_co2", reverse=False)
+
+        scenario_count += 1
+
+        # progress feedback elke 25.000 scenario's
+        if scenario_count % 25000 == 0:
+            print(f"Verwerkt: {scenario_count}")
+
+    result = {
+        "meta": {
+            "gebouw_id": args.gebouw,
+            "scenarios_evaluated": scenario_count
+        },
+        "goedkoopste_10": goedkoopste,
+        "duurste_10": duurste,
+        "laagste_co2_10": laagste_co2
+    }
+
+    with output_path.open("w", encoding="utf-8") as f_out:
+        json.dump(result, f_out, indent=2, ensure_ascii=False)
+
+    print(f"\nOK -> {output_path}")
+    print(f"Gebouw: {args.gebouw}")
+    print(f"Scenario's geëvalueerd: {scenario_count}")
+
 
 if __name__ == "__main__":
     main()

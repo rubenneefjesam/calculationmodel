@@ -1,30 +1,32 @@
 #!/usr/bin/env python3
-# Usage:
-# python scripts/generate_onderdelen.csv [onderdelen.jsonl]
 
 import csv
 import json
-import sys
 from pathlib import Path
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python generate_onderdelen.py materials.csv [onderdelen.jsonl]")
-        raise SystemExit(1)
 
-    src = Path(sys.argv[1])
-    out = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("onderdelen.jsonl")
+def main():
+    # project root = 1 niveau boven scripts/
+    root = Path(__file__).resolve().parents[1]
+
+    src = root / "data" / "brondata" / "materials.csv"
+    out = root / "data" / "brondata" / "onderdelen.jsonl"
+
+    if not src.exists():
+        print(f"ERROR: materials.csv niet gevonden -> {src}")
+        return
 
     categorie_set = set()
 
-    with src.open("r", encoding="utf-8-sig", newline="") as f:
+    with src.open("r", encoding="cp1252", newline="") as f:
         reader = csv.DictReader(f, delimiter=";")
+        reader.fieldnames = [h.strip() for h in reader.fieldnames]
+
         for row in reader:
             cat = (row.get("Categorie") or "").strip()
             if cat:
                 categorie_set.add(cat)
 
-    # Sorteer voor stabiele output
     categorie_list = sorted(categorie_set)
 
     with out.open("w", encoding="utf-8") as f_out:
