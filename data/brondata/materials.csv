@@ -1,0 +1,103 @@
+BH;BP;BD;Categorie;Naam;Materiaal;Dikte - mm;Rd m2k;MG CO2 - stuk;MG CO2 - m2;Prijs/norm;Enh;Omschrijving ;Duurzaam;Toepassing;Opmerking
+34;33,1;10;Beglazing;HR++;HR++;nvt;nvt;nvt;8,108;170;m2;Vervangen vaste beglazing HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,15;15;Beglazing;HR+++;Triple isolatieglas HR+++ (U?0,6);nvt;nvt;nvt;9,04;215;m2;HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,2;20;Beglazing;Vacuum;Vacuüm isolatieglas (U?0,4);nvt;nvt;nvt;21;325;m2;HR+++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,25;25;Beglazing;HR++ Isomax;Dubbel isolatieglas HR++ (U?1,1);nvt;nvt;nvt;11,7;165;m2;Vacuum;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,3;30;Beglazing;HR++;Dubbel isolatieglas HR++ (U?1,1);nvt;nvt;nvt;1,2;165;m2;HR++ Isomax;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,35;35;Beglazing;HR++;Dubbel isolatieglas HR++ (U?1,1);nvt;nvt;nvt;7,46;165;m2;HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,4;40;Beglazing;HR+++;Triple isolatieglas HR+++ (U?0,6);nvt;nvt;nvt;8,75;215;m2;HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,45;45;Bodem/Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;60;3,88;nvt;22,68;32;m2;HR+++;0;Begane grond / kruipruimte;
+34;33,5;50;Bodem/Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;80;4,79;nvt;20,9304;32;m2;Folie/thermokussen - 60 mm;0;Begane grond / kruipruimte;
+34;33,55;55;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;225;5,07;nvt;20,6712;27;m2;Folie/thermokussen - 80 mm;0;Begane grond / kruipruimte;
+34;33,6;60;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;250;5,63;nvt;20,5092;27;m2;EPS bodemparels - 225 mm;0;Begane grond / kruipruimte;
+34;33,65;65;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;275;6,2;nvt;4,8545;27;m2;EPS bodemparels - 250 mm;0;Begane grond / kruipruimte;
+34;33,7;70;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;300;6,76;nvt;nvt;27;m2;EPS bodemparels - 275 mm;0;Begane grond / kruipruimte;
+34;33,75;75;Bodem/Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;400;4,99;nvt;nvt;27;m2;EPS bodemparels - 300 mm;0;Begane grond / kruipruimte;
+34;33,8;80;Bodem/Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;425;5,31;nvt;nvt;27;m2;EPS bodem gerecycled - 400 mm;0;Begane grond / kruipruimte;
+34;33,85;85;Bodem/Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;450;5,93;nvt;nvt;27;m2;EPS bodem gerecycled - 425 mm;0;Begane grond / kruipruimte;
+34;33,9;90;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;225;5,07;nvt;nvt;27;m2;EPS bodem gerecycled - 450 mm;1;Begane grond / kruipruimte;
+34;33,95;95;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;250;5,63;nvt;nvt;27;m2;BIO-EPS bodemparels - 225 mm;1;Begane grond / kruipruimte;
+34;33,1;100;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;275;6,2;nvt;nvt;27;m2;BIO-EPS bodemparels - 250 mm;1;Begane grond / kruipruimte;
+34;33,105;105;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;300;6,76;nvt;nvt;27;m2;BIO-EPS bodemparels - 275 mm;1;Begane grond / kruipruimte;
+34;33,11;110;Bodem/Vloerisolatie;PIR/Pur platen (PIR) ;PUR/PIR hardschuim isolatie;80;3,19;nvt;nvt;50;m2;BIO-EPS bodemparels - 300 mm;0;Begane grond / kruipruimte;
+34;33,115;115;Bodem/Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;80;4,79;nvt;nvt;32;m2;PUR/PIR platen - 80 mm;0;Begane grond / kruipruimte;
+34;33,12;120;Dakafwerking;Groen dak;Algemeen isolatiemateriaal;nvt;nvt;nvt;nvt;50;m2;Folie/thermokussen - 80 mm;0;Dakconstructie;
+34;33,125;125;Deuren;Hout incl isolatie;Algemeen isolatiemateriaal;nvt;1;25,11;nvt;50;stuk;Groen dak;0;Woning algemeen;
+34;33,13;130;Deuren;Hout;Algemeen isolatiemateriaal;nvt;nvt;22,11;nvt;50;stuk;Hout incl isolatie;0;Woning algemeen;
+34;33,135;135;Gevelisolatie;EPS spouwparels;EPS isolatie parels/platen;50;1,47;nvt;nvt;27;m2;Hout;0;Spouw;
+34;33,14;140;Gevelisolatie;EPS spouwparels;EPS isolatie parels/platen;60;1,69;nvt;nvt;27;m2;EPS spouwparels - 50 mm;0;Spouw;
+34;33,145;145;Gevelisolatie;EPS spouwparels;EPS isolatie parels/platen;70;1,92;nvt;nvt;27;m2;EPS spouwparels - 60 mm;0;Spouw;
+34;33,15;150;Gevelisolatie;BIO-EPS spouwparels ;EPS isolatie parels/platen;50;1,47;nvt;nvt;27;m2;EPS spouwparels - 70 mm;1;Spouw;
+34;33,155;155;Gevelisolatie;BIO-EPS spouwparels ;EPS isolatie parels/platen;60;1,69;nvt;nvt;27;m2;BIO-EPS spouwparels  - 50 mm;1;Spouw;
+34;33,16;160;Gevelisolatie;BIO-EPS spouwparels ;EPS isolatie parels/platen;70;1,92;nvt;nvt;27;m2;BIO-EPS spouwparels - 60 mm;1;Spouw;
+34;33,165;165;Gevelisolatie;Cellulose;Gevelisolatie systeem;50;1,42;nvt;nvt;50;m2;BIO-EPS spouwparels - 70 mm ;1;Voorzetwand;Let op niet in spouw maar voorzet
+34;33,17;170;Gevelisolatie;Cellulose;Gevelisolatie systeem;60;1,64;nvt;nvt;50;m2;Cellulose - 50 mm;1;Voorzetwand;Let op niet in spouw maar voorzet
+34;33,175;175;Gevelisolatie;Cellulose;Gevelisolatie systeem;70;1,85;nvt;nvt;50;m2;Cellulose - 60 mm;1;Voorzetwand;Let op niet in spouw maar voorzet
+34;33,18;180;Gevelisolatie;Vlas;Gevelisolatie systeem;50;1,55;nvt;nvt;50;m2;Cellulose - 70 mm;1;Voorzetwand;Let op niet in spouw maar voorzet
+34;33,185;185;Gevelisolatie;Vlas;Gevelisolatie systeem;60;1,78;nvt;nvt;50;m2;Vlas - 50 mm;1;Voorzetwand;Let op niet in spouw maar voorzet
+34;33,19;190;Gevelisolatie;Vlas;Gevelisolatie systeem;70;2,02;nvt;nvt;50;m2;Vlas - 60 mm;1;Voorzetwand;Let op niet in spouw maar voorzet
+34;33,195;195;Gevelisolatie;EPS spouwparels;EPS isolatie parels/platen;50;1,47;nvt;nvt;27;m2;Vlas - 70 mm;0;Buitengevel;
+34;33,2;200;Gevelisolatie;EPS spouwparels;EPS isolatie parels/platen;60;1,69;nvt;nvt;27;m2;EPS spouwparels - 50 mm;0;Buitengevel;
+34;33,205;205;Gevelisolatie;EPS spouwparels;EPS isolatie parels/platen;70;1,92;nvt;nvt;27;m2;EPS spouwparels - 60 mm;0;Buitengevel;
+34;33,21;210;Gevelisolatie;PUR schuim;PUR/PIR hardschuim isolatie;50;1,47;nvt;nvt;50;m2;EPS spouwparels - 70 mm;0;Buitengevel;
+34;33,215;215;Gevelisolatie;PUR schuim;PUR/PIR hardschuim isolatie;60;1,69;nvt;nvt;50;m2;Aminotherm - 50 mm;0;Buitengevel;
+34;33,22;220;Gevelisolatie;PUR schuim;PUR/PIR hardschuim isolatie;70;1,92;nvt;nvt;50;m2;Aminotherm - 60 mm;0;Buitengevel;
+34;33,225;225;Hellend dakisolatie;Glaswol;Algemeen isolatiemateriaal;310;6,29;nvt;nvt;50;m2;Aminotherm - 70 mm;0;Dakconstructie;
+34;33,23;230;Hellend dakisolatie;Isovlas;Algemeen isolatiemateriaal;270;6,3;nvt;nvt;50;m2;Glaswol - 310 mm;1;Dakconstructie;
+34;33,235;235;Hellend dakisolatie;Cellulose;Algemeen isolatiemateriaal;240;6,3;nvt;nvt;50;m2;Isovlas - 270 mm;1;Dakconstructie;
+34;33,24;240;Hellend dakisolatie;Schapenwol;Algemeen isolatiemateriaal;240;6,3;nvt;nvt;50;m2;Cellulose - 240 mm;1;Dakconstructie;
+34;33,245;245;Hellend dakisolatie;EPS 50% gerecycled;EPS isolatie parels/platen;234;6,3;nvt;nvt;27;m2;Schapenwol - 240  mm;1;Dakconstructie;
+34;33,25;250;Hellend dakisolatie;EPS 50% gerecycled;EPS isolatie parels/platen;163;4,5;nvt;nvt;27;m2;EPS 50% gerecycled - 234 mm;1;Dakconstructie;
+34;33,255;255;Hellend dakisolatie;EPS 50% gerecycled;EPS isolatie parels/platen;182;5;nvt;nvt;27;m2;EPS 50% gerecycled - 163 mm;1;Dakconstructie;
+34;33,26;260;Kozijnen/Draaiend deel;Kunststof;Algemeen isolatiemateriaal;nvt;nvt;nvt;nvt;50;stuk;EPS 50% gerecycled - 182 mm;0;Woning algemeen;Let op is per m2 raam oppervlakte
+34;33,265;265;Kozijnen/Draaiend deel;Aluminium VMRG keurmerk;Algemeen isolatiemateriaal;nvt;nvt;nvt;nvt;50;stuk;Kunststof;0;Woning algemeen;Let op is per m2 raam oppervlakte
+34;33,27;270;Kozijnen/Draaiend deel;Hout;Algemeen isolatiemateriaal;nvt;nvt;nvt;nvt;50;stuk;Aluminium VMRG keurmerk;1;Woning algemeen;Let op is per m2 raam oppervlakte
+34;33,275;275;Panelen;PUR/PIR platen;PUR/PIR hardschuim isolatie;50;2,3;nvt;;50;stuk;Hout;0;Woning algemeen;
+34;33,28;280;Panelen;PUR/PIR platen;PUR/PIR hardschuim isolatie;60;2,75;nvt;;50;stuk;PUR/PIR platen - 50 mm;0;Woning algemeen;
+34;33,285;285;Plat dakisolatie,Hellend dakisolatie;EPS platen;EPS isolatie parels/platen;189;6,3;nvt;;27;m2;PUR/PIR platen - 60 mm;0;Dakconstructie;
+34;33,29;290;Plat dakisolatie,Hellend dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;120;6,46;nvt;;50;m2;EPS platen - 189 mm;0;Dakconstructie;
+34;33,295;295;Plat dakisolatie,Hellend dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;160;6,38;nvt;;50;m2;PUR/PIR platen - 120 mm;0;Dakconstructie;
+34;33,3;300;Plat dakisolatie,Hellend dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;180;6,33;nvt;;50;m2;PUR/PIR platen - 160 mm;0;Dakconstructie;
+34;33,305;305;Plat dakisolatie,Hellend dakisolatie;Houtvezelplaat;Algemeen isolatiemateriaal;240;6,65;nvt;;50;m2;PUR/PIR platen - 180 mm;1;Dakconstructie;
+34;33,31;310;Rekenwaarde;Ijzer;Algemeen isolatiemateriaal;nvt;nvt;2.03;;50;stuk;Houtvezelplaat - 240 mm;0;Woning algemeen;
+34;33,315;315;Ventilatie;Balansventilatie ITHO HRU ECO 300;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk;Ijzer;0;Balansventilatie;
+34;33,32;320;Ventilatie;Balansventilatie ITHO HRU ECO 400;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk; Balansventilatie ITHO HRU ECO 300;0;Balansventilatie;
+34;33,325;325;Ventilatie;Balansventilatie ITHO HRU 400;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk; Balansventilatie ITHO HRU ECO 350;0;Balansventilatie;
+34;33,33;330;Ventilatie;Balansventilatie Zehnder ComfoAir Q350;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk; Balansventilatie ITHO HRU 400;0;Balansventilatie;
+34;33,335;335;Ventilatie;Balansventilatie Zehnder ComfoAir Q450;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk;Balansventilatie Zehnder ComfoAir Q350;0;Balansventilatie;
+34;33,34;340;Ventilatie;Balansventilatie Zehnder ComfoAir E300;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk;Balansventilatie Zehnder ComfoAir Q450;0;Balansventilatie;
+34;33,345;345;Ventilatie;Balansventilatie Zehnder ComfoAir E350;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk;Balansventilatie Zehnder ComfoAir E300;0;Balansventilatie;
+34;33,35;350;Ventilatie;Mechanische ventilatie Zehnder Comfofan Silent;Algemeen isolatiemateriaal;nvt;nvt;77,1;;50;stuk;Balansventilatie Zehnder ComfoAir E350;0;Mechanische ventilatie;
+34;33,355;355;Ventilatie;Mechanische ventilatie Itho CVE-S ECO;Algemeen isolatiemateriaal;nvt;nvt;77,1;;50;stuk;Mechanische ventilatie Zehnder Comfofan Silent;0;Mechanische ventilatie;
+34;33,36;360;Verwarming;Gasketel - gemiddeld;Algemeen isolatiemateriaal;nvt;nvt;485,63;;50;stuk;Mechanische ventilatie Itho CVE-S ECO;0;Gasketel;Referentiegetal gasketel onafhankelijk van type of vermogen, getal is inclusief vervangen jaar 15
+34;33,365;365;Verwarming;Hybride WP Nathan Paros 4 (R454B);Algemeen isolatiemateriaal;nvt;nvt;1763,9108;;50;stuk;Gasketel - gemiddeld;0;Hybride warmtepomp;Koudemiddel 1x vervangen na 15 jaar
+34;33,37;370;Verwarming;All-E WP Nathan Paros 4 (R454B);Algemeen isolatiemateriaal;nvt;nvt;1871,5008;;50;stuk;Hybride WP Nathan Paros 4 (R454B);0;All electric warmtepomp;
+34;33,375;375;Verwarming;Hybride WP Nibe AMS20-6 / HBS20-6 (R32);Algemeen isolatiemateriaal;nvt;nvt;1877,331;;50;stuk;All-E WP Nathan Paros 4 (R454B);0;Hybride warmtepomp;
+34;33,38;380;Verwarming;All-E WP Nibe AMS20-6 / HBS20-6 (R32);Algemeen isolatiemateriaal;nvt;nvt;1984,921;;50;stuk;Hybride WP Nibe AMS20-6 / HBS20-6 (R32);0;All electric warmtepomp;
+34;33,385;385;Verwarming;Hybride WP Nibe AMS20-10 / HBS20-10 (R32);Algemeen isolatiemateriaal;nvt;nvt;2635,8148;;50;stuk;All-E WP Nibe AMS20-6 / HBS20-6 (R32);0;Hybride warmtepomp;
+34;33,39;390;Verwarming;All-E WP Nibe AMS20-10 / HBS20-10 (R32);Algemeen isolatiemateriaal;nvt;nvt;2743,4048;;50;stuk;Hybride WP Nibe AMS20-10 / HBS20-10 (R32);0;All electric warmtepomp;
+34;33,395;395;Verwarming;All-E Itho Daalderop Vincent (R290);Algemeen isolatiemateriaal;nvt;nvt;255,338;;50;stuk;All-E WP Nibe AMS20-10 / HBS20-10 (R32);0;All electric warmtepomp;
+34;33,4;400;Verwarming;Hybride Itho Daalderop Vincent (R290);Algemeen isolatiemateriaal;nvt;nvt;147,748;;50;stuk;All-E Itho Daalderop Vincent (R290);0;Hybride warmtepomp;
+34;33,405;405;Verwarming;All-E Itho Daalderop Amber 6,5 (R290);Algemeen isolatiemateriaal;nvt;nvt;400,262;;50;stuk;Hybride Itho Daalderop Vincent (R290);0;All electric warmtepomp;
+34;33,41;410;Verwarming;Hybride Itho Daalderop Amber 6,5  (R290);Algemeen isolatiemateriaal;nvt;nvt;260,192;;50;stuk;All-E Itho Daalderop Amber 6,5 (R290);0;Hybride warmtepomp;
+34;33,415;415;Verwarming;All-E Itho Daalderop Amber 9,5 (R290);Algemeen isolatiemateriaal;nvt;nvt;416,899;;50;stuk;Hybride Itho Daalderop Amber 6,5  (R290);0;All electric warmtepomp;
+34;33,42;420;Verwarming;Hybride Itho Daalderop Amber 9,5  (R290);Algemeen isolatiemateriaal;nvt;nvt;276,829;;50;stuk;All-E Itho Daalderop Amber 9,5 (R290);0;Hybride warmtepomp;
+34;33,425;425;Verwarming;All-E Kronotherm Versi-I (R452B);Algemeen isolatiemateriaal;nvt;nvt;2459,375;;50;stuk;Hybride Itho Daalderop Amber 9,5  (R290);0;All electric warmtepomp;
+34;33,43;430;Verwarming;Hybride Kronotherm Versi-I (R452B);Algemeen isolatiemateriaal;nvt;nvt;2351,785;;50;stuk;All-E Kronotherm Versi-I (R452B);0;Hybride warmtepomp;
+34;33,435;435;Verwarming;All-E Mitsubishi SCR-M40V2-170E SET  (R32);Algemeen isolatiemateriaal;nvt;nvt;1345,476;;50;stuk;Hybride Kronotherm Versi-I (R452B);0;All electric warmtepomp;
+34;33,44;440;Verwarming;Hybride Mitsubishi SHR-M40V-AER-SET (R32);Algemeen isolatiemateriaal;nvt;nvt;1250,066;;50;stuk;All-E Mitsubishi SCR-M40V2-170E SET  (R32);0;Hybride warmtepomp;
+34;33,445;445;Verwarming;All-E Mitsubishi SCR-M60V2-170E SET (R32);Algemeen isolatiemateriaal;nvt;nvt;1347,506;;50;stuk;Hybride Mitsubishi SHR-M40V-AER-SET (R32);0;All electric warmtepomp;
+34;33,45;450;Verwarming;Hybride Mitsubishi SHR-M60V-AER-SET (R32);Algemeen isolatiemateriaal;nvt;nvt;1252,096;;50;stuk;All-E Mitsubishi SCR-M60V2-170E SET (R32);0;Hybride warmtepomp;
+34;33,455;455;Verwarming;Hybride Intergas X-tend (R32);Algemeen isolatiemateriaal;nvt;nvt;1256,7645;;50;stuk;Hybride Mitsubishi SHR-M60V-AER-SET (R32);0;Hybride warmtepomp;
+34;33,46;460;Verwarming;Stadsverwarming ;Algemeen isolatiemateriaal;nvt;nvt;20,3;;50;stuk;Hybride Intergas X-tend (R32);0;Stadsverwarming;grove schatting
+34;33,465;465;Verwarming;Intergas Kombi Kompakt HRE-A 28/24;Algemeen isolatiemateriaal;nvt;nvt;58,87;;50;stuk;Stadsverwarming ;0;Gasketel;
+34;33,47;470;Verwarming;Intergas Kombi Kompakt HRE-A 36/30;Algemeen isolatiemateriaal;nvt;nvt;50,75;;50;stuk;Intergas Kombi Kompakt HRE-A 28/24;0;Gasketel;
+34;33,475;475;Verwarming;Nefit ProLine NxT HRC;Algemeen isolatiemateriaal;nvt;nvt;38,57;;50;stuk;Intergas Kombi Kompakt HRE-A 36/30;0;Gasketel;
+34;33,48;480;Verwarming;Intergas KK HRE28/24A;Algemeen isolatiemateriaal;nvt;nvt;485,63;;50;stuk;Nefit ProLine NxT HRC;0;Gasketel;Referentiegetal gasketel onafhankelijk van type of vermogen, getal is inclusief vervangen jaar 15
+34;33,485;485;Zonne-energie;PV monokristallijn;Algemeen isolatiemateriaal;nvt;nvt;396,18;;50;stuk;Intergas KK HRE28/24A;0;PV paneel < 400 Wp;
+34;33,49;490;Zonne-energie;PV Solarge;Algemeen isolatiemateriaal;nvt;nvt;279;;50;stuk;PV monokristallijn;1;PV paneel > 400 Wp;
+34;33,495;495;Zonne-energie;PV Solarge;Algemeen isolatiemateriaal;nvt;nvt;269;;50;stuk;PV Solarge - 430 Wp;;PV paneel > 400 Wp;
+34;33,5;500;Zonne-energie;PV Standaard;Algemeen isolatiemateriaal;nvt;nvt;396,18;;50;stuk;PV Solarge - 410 Wp;;PV paneel < 400 Wp;
+34;33,505;505;Zonne-energie;PV standaard;Algemeen isolatiemateriaal;nvt;nvt;423,51;;50;stuk;PV standaard -380 Wp;;PV paneel > 400 Wp;
+34;33,51;510;Zonne-energie;PV standaard;Algemeen isolatiemateriaal;nvt;nvt;459,95;;50;stuk;PV standaard - 410 Wp;;PV paneel > 400 Wp;
+34;33,515;515;;PV standaard - 450 Wp;Algemeen isolatiemateriaal;;;;;50;stuk;PV standaard - 450 Wp;;Woning algemeen;

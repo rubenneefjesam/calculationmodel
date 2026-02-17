@@ -1,0 +1,30 @@
+BH;BP;BD;Input dronescan;Rekenregel;Categorie;Naam;Materiaal;Opwek WP;Dikte - mm;Rd m2k;MG CO2 - stuk;MG CO2 - m2;Prijs/norm;Enh;Omschrijving 
+34;33.10;010;VASTGLAS;gem won;Beglazing ;Vervangen vaste beglazing HR++;HR++;x;;x;x;39,6;170;m2;Vastglas vervangen voor HR++ beglazing U=1,1 ( 4-15-4, 5-15-4, 6-15-4)
+34;33.10;015;VASTGLAS;gem won;Beglazing ;Vervangen vaste beglazing HR+++;HR+++;x;;x;x;59,52;210;m2;Toeslag glasopppervlakte < 1m2
+37;41.20;010;METSELWERK;gem won;Gevelisolatie ;Isoleren - Spouw 50mm - Airofill EPS;EPS schuimparels d=50mm;x;50;1,47;x;3,2;17;m2;
+37;41.20;015;METSELWERK;gem won;Gevelisolatie ;Isoleren - Spouw 60mm - Airofill EPS;EPS schuimparels d=60mm;x;60;1,69;x;3,68;18;m2;
+37;41.20;020;METSELWERK;gem won;Gevelisolatie ;Isoleren - Spouw 70mm - Airofill EPS;EPS schuimparels d=70mm;x;70;1,92;x;4,19;19;m2;
+37;41.20;025;METSELWERK;gem won;Gevelisolatie ;Isoleren - Spouw 50mm - Airofill Innovative Wall Insulation;Airofill Wall d=50mm + 5 spouwankers;x;50;1,47;x;3,2;190;m2;
+37;41.20;030;METSELWERK;gem won;Gevelisolatie ;Isoleren - Spouw 60mm - Airofill Innovative Wall Insulation;Airofill Wall d=60mm + 5 spouwankers;x;60;1,69;x;3,68;205;m2;
+37;41.20;035;METSELWERK;gem won;Gevelisolatie ;Isoleren - Spouw 70mm - Airofill Innovative Wall Insulation;Airofill Wall d=70mm + 5 spouwankers;x;70;1,92;x;4,19;220;m2;
+44;37.12;010;DAKOPPERVLAK;gem won;Plat dakisolatie;Buitendaks;PUR/PIR platen - 120 mm;x;120;6,3;x;20,9304;60;m2;
+44;37.12;015;DAKOPPERVLAK;gem won;Plat dakisolatie;Buitendaks;EPS platen - 189 mm;x;189;6,46;x;22,68;60;m2;
+44;37.12;020;DAKOPPERVLAK;gem won;Plat dakisolatie;Buitendaks;Houtvezelplaat - 240 mm;x;240;6,65;x;4,8545;150;m2;
+44;37.12;025;DAKOPPERVLAK;gem won;Hellend dakisolatie;Binnendaks;Isovlas - 270 mm;x;270;6,3;x;7,16;150;m2;
+44;37.12;030;DAKOPPERVLAK;gem won;Hellend dakisolatie;Buitendaks;PUR/PIR platen - 160 mm;x;120;6,38;x;20,6712;60;m2;
+30;38.22;010;DEUR;gem won;Deur;Deur (Hout incl isolatie);Verweij BestLife EPA;x;x;x;25,11;x;140;stuk;
+30;38.22;015;DEUR;gem won;Deur;Deur (Hout);Verweij standaard;x;x;x;22,11;x;1300;stuk;
+37;42.40;010;VLOER/BODEM;gem won;Vloerisolatie;Vloer 80mm - Kingspan Kooltherm K10 plafondplaat;PIR/Pur platen (PIR) ;x;80;3,19;x;10,34;33;m2;
+37;42.40;015;VLOER/BODEM;gem won;Vloerisolatie;Vloer 80mm - Reflex PIF Isolatiefolie;Folie/thermokussen;x;80;4,79;x;1,68;44;m2;
+46;21.12;010;KOZIJNEN;gem won;Kozijnen;Kozijnen vervangen - Kunststof;Kunststof;x;x;x;21;x;;m1;
+46;21.12;015;KOZIJNEN;gem won;Kozijnen ;Kozijnen vervangen - Aluminium VMRG keurmerk;Aluminium ;x;x;x;11,7;x;;m1;
+46;21.12;020;KOZIJNEN;gem won;Kozijnen ;Kozijnen vervangen - Hout;Hout;x;x;x;1,2;x;;m1;
+61;41.13;010;VENTILATIE;gem won;Ventilatie;Ventilatie - Systeem C - Mechanische ventilatie Itho CVE-S ECO;Mechanisch;x;x;x;77,1;x;800;stuk;
+62;41.14;015;VENTILATIE;gem won;Ventilatie;Ventilatie - Systeem D - Balansventilatie Zehnder ComfoAir E300;Balans;x;x;x;337;x;1000;stuk;
+63;41.15;020;VENTILATIE;gem won;Ventilatie;Balansventilatie ITHO HRU 400;Balans;x;x;x;337;x;2100;stuk;
+70;33.40;900;OPWEK;gem won;Opwek;PV-Panelen - standaard 410 WP;PV monokristallijn;410;x;x;423;x;500;stuk;
+;;015;OPWEK;gem won;Opwek - toevoeging;Omvormer ;Standaard omvormer;x;x;x;567;x;900;stuk;!! Altijd aanwezig bij PV paneel
+70;33.40;020;OPWEK;gem won;Opwek;PV-Panelen - solarge 410 WP;PV Solarge;410;x;x;269;x;;stuk;
+60;33.21;010;VERWARMING;gem won;Warmtepomp;Hybride Kronotherm Versi-I (R452B);Hybride;x;x;x;2352;x;15000;stuk;
+60;33.21;015;VERWARMING;gem won;Warmtepomp;All-E WP Nibe AMS20-6 / HBS20-6 (R32);All-electric;x;x;x;1985;x;16000;stuk;
+60;33.21;020;VERWARMING;gem won;Warmtepomp;All-E Kronotherm Versi-I (R452B);All-electric;x;x;x;2459;x;2100;stuk;

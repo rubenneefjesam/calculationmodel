@@ -1,0 +1,2 @@
+{"constraint_id":"C01","type":"requires","severity":"hard","if":[{"onderdeel_id":"06","op":"!=","value":"NONE"}],"then":[{"onderdeel_id":"01","op":"!=","value":"NONE"}],"msg":"Als kozijnen (06) gekozen is, moet beglazing (01) ook gekozen zijn."}
+{"constraint_id":"C02","type":"default","severity":"auto","if":[{"onderdeel_id":"07","op":"!=","value":"NONE"}],"then":[{"onderdeel_id":"08","set":"OMVORMER_STD"}],"msg":"Als zonnepanelen/opwek (07) gekozen is, zet opwek-toevoeging (08) op standaard omvormer."}
