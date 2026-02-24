@@ -1,7 +1,7 @@
 {
   "meta": {
     "gebouw_id": 1,
-    "scenarios_evaluated": 10000,
+    "scenarios_evaluated": 100000,
     "scenarios_valid": 0,
     "objective": "totaal_mg_co2",
     "direction": "min",

@@ -9,7 +9,8 @@ sys.path.append(str(ROOT))
 import argparse
 
 from engine.loader import read_jsonl, read_materials_lookup, read_gebouw
-from engine.calculator_totaal_prijs import bereken_scenario
+from engine.calculator_totaal_prijs import bereken_totaal_prijs
+from engine.calculator_totaal_mg_co2 import bereken_totaal_mg_co2
 from engine.ranking import update_top_list
 from engine.writer import write_summary, append_scenario_jsonl
 from engine.constraints import load_requirements, voldoet_aan_constraints
@@ -49,7 +50,6 @@ def main():
 
     print("Laden gebouw...")
     gebouw = read_gebouw(gebouw_path, args.gebouw)
-
     if not gebouw:
         print(f"Gebouw {args.gebouw} niet gevonden.")
         return
@@ -64,11 +64,8 @@ def main():
         scenario_id = scenario["scenario_id"]
         keuzes = scenario["keuzes"]
 
-        # bereken_scenario returned: (totaal_prijs, totaal_co2)
-        # We blijven de calculator gebruiken, maar noemen het hier expliciet totaal_mg_co2.
-        totaal_prijs, totaal_mg_co2 = bereken_scenario(
-            keuzes, material_lookup, gebouw
-        )
+        totaal_prijs = bereken_totaal_prijs(keuzes, material_lookup, gebouw)
+        totaal_mg_co2 = bereken_totaal_mg_co2(keuzes, material_lookup, gebouw)
 
         # Altijd volledige logging (JSONL)
         jsonl_record = {
