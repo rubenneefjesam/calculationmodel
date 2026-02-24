@@ -1,0 +1,17 @@
+{
+  "constraints": {
+    "totaal_prijs": {
+      "min": 30000,
+      "max": 50000
+    },
+    "totaal_co2": {
+      "min": 4000,
+      "max": 6000
+    }
+  },
+  "objective": {
+    "primary": "totaal_prijs",
+    "direction": "min"
+  },
+  "top_n": 10
+}
