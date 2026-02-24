@@ -22,9 +22,10 @@ def read_materials_lookup(path: Path):
 
         lookup[material_id] = {
             "prijs": float(m.get("prijs_norm") or 0),
-            "co2": float(m.get("mg_co2_m2") or 0),
+            "mg_co2_m2": float(m.get("mg_co2_m2") or 0),
+            "mg_co2_stuk": float(m.get("mg_co2_stuk") or 0),
             "categorie": m.get("categorie"),
-            "enh": (m.get("enh") or "").lower()
+            "enh": (m.get("enh") or "").lower().strip(),
         }
 
     return lookup
