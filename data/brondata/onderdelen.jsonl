@@ -1,13 +1,13 @@
-{"onderdeel_id": "01", "categorie": "Beglazing"}
-{"onderdeel_id": "02", "categorie": "Bodem/Vloerisolatie"}
-{"onderdeel_id": "03", "categorie": "Dakafwerking"}
-{"onderdeel_id": "04", "categorie": "Deuren"}
-{"onderdeel_id": "05", "categorie": "Gevelisolatie"}
-{"onderdeel_id": "06", "categorie": "Hellend dakisolatie"}
-{"onderdeel_id": "07", "categorie": "Kozijnen/Draaiend deel"}
-{"onderdeel_id": "08", "categorie": "Panelen"}
-{"onderdeel_id": "09", "categorie": "Plat dakisolatie,Hellend dakisolatie"}
-{"onderdeel_id": "10", "categorie": "Rekenwaarde"}
-{"onderdeel_id": "11", "categorie": "Ventilatie"}
-{"onderdeel_id": "12", "categorie": "Verwarming"}
-{"onderdeel_id": "13", "categorie": "Zonne-energie"}
+{"onderdeel_id": "01", "categorie": "Beglazing", "enh": ["m2"]}
+{"onderdeel_id": "02", "categorie": "Bodem/Vloerisolatie", "enh": ["m2"]}
+{"onderdeel_id": "03", "categorie": "Dakafwerking", "enh": ["m2"]}
+{"onderdeel_id": "04", "categorie": "Deuren", "enh": ["stuks"]}
+{"onderdeel_id": "05", "categorie": "Gevelisolatie", "enh": ["m2"]}
+{"onderdeel_id": "06", "categorie": "Hellend dakisolatie", "enh": ["m2"]}
+{"onderdeel_id": "07", "categorie": "Kozijnen/Draaiend deel", "enh": ["stuks"]}
+{"onderdeel_id": "08", "categorie": "Panelen", "enh": ["stuks"]}
+{"onderdeel_id": "09", "categorie": "Plat dakisolatie,Hellend dakisolatie", "enh": ["m2"]}
+{"onderdeel_id": "10", "categorie": "Rekenwaarde", "enh": ["stuks"]}
+{"onderdeel_id": "11", "categorie": "Ventilatie", "enh": ["stuks"]}
+{"onderdeel_id": "12", "categorie": "Verwarming", "enh": ["stuks"]}
+{"onderdeel_id": "13", "categorie": "Zonne-energie", "enh": ["stuks"]}
