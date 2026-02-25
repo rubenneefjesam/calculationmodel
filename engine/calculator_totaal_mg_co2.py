@@ -14,7 +14,6 @@ def bereken_totaal_mg_co2(
 ) -> float:
     totaal = 0.0
 
-    # LET OP: we gebruiken onderdeel_id uit scenario keys
     for onderdeel_id, material_id in keuzes.items():
         if material_id == "NONE":
             continue
@@ -26,7 +25,6 @@ def bereken_totaal_mg_co2(
         enh = _norm_enh(m.get("enh"))
         factor = bepaal_factor(onderdeel_id, enh, gebouw)
 
-        # co2 veld kiezen op basis van enh
         if enh == "stuks":
             totaal += float(m.get("mg_co2_stuk") or 0.0) * factor
         else:

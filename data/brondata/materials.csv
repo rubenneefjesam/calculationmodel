@@ -1,26 +1,26 @@
 BH;BP;BD;Categorie;Naam;Materiaal;Dikte - mm;Rd m2k;MG CO2 - stuk;MG CO2 - m2;Prijs/norm;Enh;Omschrijving ;Duurzaam;Toepassing;Opmerking
 34;33,1;10;Beglazing;HR++;HR++;nvt;nvt;nvt;8,108;170;m2;Vervangen vaste beglazing HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
 34;33,15;15;Beglazing;HR+++;Triple isolatieglas HR+++ (U?0,6);nvt;nvt;nvt;9,04;215;m2;HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
-34;33,2;20;Beglazing;Vacuum;Vacuüm isolatieglas (U?0,4);nvt;nvt;nvt;21;325;m2;HR+++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
+34;33,2;20;Beglazing;Vacuum;Vacuï¿½m isolatieglas (U?0,4);nvt;nvt;nvt;21;325;m2;HR+++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
 34;33,25;25;Beglazing;HR++ Isomax;Dubbel isolatieglas HR++ (U?1,1);nvt;nvt;nvt;11,7;165;m2;Vacuum;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
 34;33,3;30;Beglazing;HR++;Dubbel isolatieglas HR++ (U?1,1);nvt;nvt;nvt;1,2;165;m2;HR++ Isomax;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
 34;33,35;35;Beglazing;HR++;Dubbel isolatieglas HR++ (U?1,1);nvt;nvt;nvt;7,46;165;m2;HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
 34;33,4;40;Beglazing;HR+++;Triple isolatieglas HR+++ (U?0,6);nvt;nvt;nvt;8,75;215;m2;HR++;1;Ramen en kozijnen;Let op is per m2 raam oppervlakte
-34;33,45;45;Bodem/Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;60;3,88;nvt;22,68;32;m2;HR+++;0;Begane grond / kruipruimte;
-34;33,5;50;Bodem/Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;80;4,79;nvt;20,9304;32;m2;Folie/thermokussen - 60 mm;0;Begane grond / kruipruimte;
-34;33,55;55;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;225;5,07;nvt;20,6712;27;m2;Folie/thermokussen - 80 mm;0;Begane grond / kruipruimte;
-34;33,6;60;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;250;5,63;nvt;20,5092;27;m2;EPS bodemparels - 225 mm;0;Begane grond / kruipruimte;
-34;33,65;65;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;275;6,2;nvt;4,8545;27;m2;EPS bodemparels - 250 mm;0;Begane grond / kruipruimte;
-34;33,7;70;Bodem/Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;300;6,76;nvt;nvt;27;m2;EPS bodemparels - 275 mm;0;Begane grond / kruipruimte;
-34;33,75;75;Bodem/Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;400;4,99;nvt;nvt;27;m2;EPS bodemparels - 300 mm;0;Begane grond / kruipruimte;
-34;33,8;80;Bodem/Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;425;5,31;nvt;nvt;27;m2;EPS bodem gerecycled - 400 mm;0;Begane grond / kruipruimte;
-34;33,85;85;Bodem/Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;450;5,93;nvt;nvt;27;m2;EPS bodem gerecycled - 425 mm;0;Begane grond / kruipruimte;
-34;33,9;90;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;225;5,07;nvt;nvt;27;m2;EPS bodem gerecycled - 450 mm;1;Begane grond / kruipruimte;
-34;33,95;95;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;250;5,63;nvt;nvt;27;m2;BIO-EPS bodemparels - 225 mm;1;Begane grond / kruipruimte;
-34;33,1;100;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;275;6,2;nvt;nvt;27;m2;BIO-EPS bodemparels - 250 mm;1;Begane grond / kruipruimte;
-34;33,105;105;Bodem/Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;300;6,76;nvt;nvt;27;m2;BIO-EPS bodemparels - 275 mm;1;Begane grond / kruipruimte;
-34;33,11;110;Bodem/Vloerisolatie;PIR/Pur platen (PIR) ;PUR/PIR hardschuim isolatie;80;3,19;nvt;nvt;50;m2;BIO-EPS bodemparels - 300 mm;0;Begane grond / kruipruimte;
-34;33,115;115;Bodem/Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;80;4,79;nvt;nvt;32;m2;PUR/PIR platen - 80 mm;0;Begane grond / kruipruimte;
+34;33,45;45;Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;60;3,88;nvt;22,68;32;m2;HR+++;0;Begane grond / kruipruimte;
+34;33,5;50;Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;80;4,79;nvt;20,9304;32;m2;Folie/thermokussen - 60 mm;0;Begane grond / kruipruimte;
+34;33,55;55;Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;225;5,07;nvt;20,6712;27;m2;Folie/thermokussen - 80 mm;0;Begane grond / kruipruimte;
+34;33,6;60;Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;250;5,63;nvt;20,5092;27;m2;EPS bodemparels - 225 mm;0;Begane grond / kruipruimte;
+34;33,65;65;Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;275;6,2;nvt;4,8545;27;m2;EPS bodemparels - 250 mm;0;Begane grond / kruipruimte;
+34;33,7;70;Vloerisolatie;EPS bodemparels;EPS isolatie parels/platen;300;6,76;nvt;nvt;27;m2;EPS bodemparels - 275 mm;0;Begane grond / kruipruimte;
+34;33,75;75;Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;400;4,99;nvt;nvt;27;m2;EPS bodemparels - 300 mm;0;Begane grond / kruipruimte;
+34;33,8;80;Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;425;5,31;nvt;nvt;27;m2;EPS bodem gerecycled - 400 mm;0;Begane grond / kruipruimte;
+34;33,85;85;Vloerisolatie;EPS gerecycled;EPS isolatie parels/platen;450;5,93;nvt;nvt;27;m2;EPS bodem gerecycled - 425 mm;0;Begane grond / kruipruimte;
+34;33,9;90;Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;225;5,07;nvt;nvt;27;m2;EPS bodem gerecycled - 450 mm;1;Begane grond / kruipruimte;
+34;33,95;95;Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;250;5,63;nvt;nvt;27;m2;BIO-EPS bodemparels - 225 mm;1;Begane grond / kruipruimte;
+34;33,1;100;Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;275;6,2;nvt;nvt;27;m2;BIO-EPS bodemparels - 250 mm;1;Begane grond / kruipruimte;
+34;33,105;105;Vloerisolatie;BIO-EPS bodemparels;EPS isolatie parels/platen;300;6,76;nvt;nvt;27;m2;BIO-EPS bodemparels - 275 mm;1;Begane grond / kruipruimte;
+34;33,11;110;Vloerisolatie;PIR/Pur platen (PIR) ;PUR/PIR hardschuim isolatie;80;3,19;nvt;nvt;50;m2;BIO-EPS bodemparels - 300 mm;0;Begane grond / kruipruimte;
+34;33,115;115;Vloerisolatie;Folie/thermokussen;Thermokussen bodem/vloerisolatie;80;4,79;nvt;nvt;32;m2;PUR/PIR platen - 80 mm;0;Begane grond / kruipruimte;
 34;33,12;120;Dakafwerking;Groen dak;Algemeen isolatiemateriaal;nvt;nvt;nvt;nvt;50;m2;Folie/thermokussen - 80 mm;0;Dakconstructie;
 34;33,125;125;Deuren;Hout incl isolatie;Algemeen isolatiemateriaal;nvt;1;25,11;nvt;50;stuk;Groen dak;0;Woning algemeen;
 34;33,13;130;Deuren;Hout;Algemeen isolatiemateriaal;nvt;nvt;22,11;nvt;50;stuk;Hout incl isolatie;0;Woning algemeen;
@@ -54,12 +54,11 @@ BH;BP;BD;Categorie;Naam;Materiaal;Dikte - mm;Rd m2k;MG CO2 - stuk;MG CO2 - m2;Pr
 34;33,27;270;Kozijnen/Draaiend deel;Hout;Algemeen isolatiemateriaal;nvt;nvt;nvt;nvt;50;stuk;Aluminium VMRG keurmerk;1;Woning algemeen;Let op is per m2 raam oppervlakte
 34;33,275;275;Panelen;PUR/PIR platen;PUR/PIR hardschuim isolatie;50;2,3;nvt;;50;stuk;Hout;0;Woning algemeen;
 34;33,28;280;Panelen;PUR/PIR platen;PUR/PIR hardschuim isolatie;60;2,75;nvt;;50;stuk;PUR/PIR platen - 50 mm;0;Woning algemeen;
-34;33,285;285;Plat dakisolatie,Hellend dakisolatie;EPS platen;EPS isolatie parels/platen;189;6,3;nvt;;27;m2;PUR/PIR platen - 60 mm;0;Dakconstructie;
-34;33,29;290;Plat dakisolatie,Hellend dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;120;6,46;nvt;;50;m2;EPS platen - 189 mm;0;Dakconstructie;
-34;33,295;295;Plat dakisolatie,Hellend dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;160;6,38;nvt;;50;m2;PUR/PIR platen - 120 mm;0;Dakconstructie;
-34;33,3;300;Plat dakisolatie,Hellend dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;180;6,33;nvt;;50;m2;PUR/PIR platen - 160 mm;0;Dakconstructie;
-34;33,305;305;Plat dakisolatie,Hellend dakisolatie;Houtvezelplaat;Algemeen isolatiemateriaal;240;6,65;nvt;;50;m2;PUR/PIR platen - 180 mm;1;Dakconstructie;
-34;33,31;310;Rekenwaarde;Ijzer;Algemeen isolatiemateriaal;nvt;nvt;2.03;;50;stuk;Houtvezelplaat - 240 mm;0;Woning algemeen;
+34;33,285;285;Plat dakisolatie;EPS platen;EPS isolatie parels/platen;189;6,3;nvt;;27;m2;PUR/PIR platen - 60 mm;0;Dakconstructie;
+34;33,29;290;Plat dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;120;6,46;nvt;;50;m2;EPS platen - 189 mm;0;Dakconstructie;
+34;33,295;295;Plat dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;160;6,38;nvt;;50;m2;PUR/PIR platen - 120 mm;0;Dakconstructie;
+34;33,3;300;Plat dakisolatie;PUR/PIR platen;PUR/PIR hardschuim isolatie;180;6,33;nvt;;50;m2;PUR/PIR platen - 160 mm;0;Dakconstructie;
+34;33,305;305;Plat dakisolatie;Houtvezelplaat;Algemeen isolatiemateriaal;240;6,65;nvt;;50;m2;PUR/PIR platen - 180 mm;1;Dakconstructie;
 34;33,315;315;Ventilatie;Balansventilatie ITHO HRU ECO 300;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk;Ijzer;0;Balansventilatie;
 34;33,32;320;Ventilatie;Balansventilatie ITHO HRU ECO 400;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk; Balansventilatie ITHO HRU ECO 300;0;Balansventilatie;
 34;33,325;325;Ventilatie;Balansventilatie ITHO HRU 400;Algemeen isolatiemateriaal;nvt;nvt;337;;50;stuk; Balansventilatie ITHO HRU ECO 350;0;Balansventilatie;
@@ -100,4 +99,3 @@ BH;BP;BD;Categorie;Naam;Materiaal;Dikte - mm;Rd m2k;MG CO2 - stuk;MG CO2 - m2;Pr
 34;33,5;500;Zonne-energie;PV Standaard;Algemeen isolatiemateriaal;nvt;nvt;396,18;;50;stuk;PV Solarge - 410 Wp;;PV paneel < 400 Wp;
 34;33,505;505;Zonne-energie;PV standaard;Algemeen isolatiemateriaal;nvt;nvt;423,51;;50;stuk;PV standaard -380 Wp;;PV paneel > 400 Wp;
 34;33,51;510;Zonne-energie;PV standaard;Algemeen isolatiemateriaal;nvt;nvt;459,95;;50;stuk;PV standaard - 410 Wp;;PV paneel > 400 Wp;
-34;33,515;515;;PV standaard - 450 Wp;Algemeen isolatiemateriaal;;;;;50;stuk;PV standaard - 450 Wp;;Woning algemeen;

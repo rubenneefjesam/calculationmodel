@@ -1,3 +1,5 @@
+# engine/constraints.py
+
 import json
 from pathlib import Path
 
@@ -10,12 +12,13 @@ def load_requirements(path: Path):
         return json.load(f)
 
 
-def voldoet_aan_constraints(record, constraints: dict):
+def voldoet_aan_constraints(record: dict, constraints: dict) -> bool:
     """
     record bevat:
         {
+            "scenario_id": ...,
             "totaal_prijs": ...,
-            "totaal_co2": ...
+            "totaal_mg_co2": ...   <- let op: was 'totaal_co2', nu consistent met compute.py
         }
     """
 
