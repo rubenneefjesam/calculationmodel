@@ -29,20 +29,17 @@ def clean(v):
     if v is None:
         return None
     v = v.strip().replace("\ufeff", "").replace("\u00a0", " ")
+    v = v.replace("\ufffd", "").replace("\x80", "").replace("€", "").strip()
     return None if v in NULLS else v
 
 
 def parse_numeric(value):
     if value is None:
         return None
-    # Strip euro-teken (€ = \x80 in cp1252, of unicode €)
-    value = value.replace("\x80", "").replace("€", "").strip()
-    # Europese notatie: punt = duizendtaldeler, komma = decimaal
-    # Voorbeelden: "2.800" -> 2800, "8,108" -> 8.108, "1.763,91" -> 1763.91
+    value = value.replace("\x80", "").replace("€", "").replace("\xef\xbf\xbd", "").strip()
     if "," in value:
         value = value.replace(".", "").replace(",", ".")
     else:
-        # Geen komma: punt is duizendtaldeler (bijv. "2.800", "1.200")
         value = value.replace(".", "")
     try:
         f = float(value)
@@ -69,7 +66,6 @@ def material_id(bh, bp, bd) -> str:
 
 
 def load_onderdelen_map(root: Path) -> dict:
-    """Laad categorie -> onderdeel_id mapping. Prefix-match voor 'Verwarming - *'."""
     m = {}
     p = root / "data" / "brondata" / "onderdelen.jsonl"
     if not p.exists():
@@ -90,10 +86,8 @@ def load_onderdelen_map(root: Path) -> dict:
 
 
 def resolve_onderdeel_id(categorie: str, omap: dict) -> str | None:
-    """Exacte match eerst, daarna prefix-match."""
     if categorie in omap:
         return omap[categorie]
-    # Prefix-match: 'Verwarming - Ketel' matcht op 'Verwarming' als die bestaat
     for key, oid in omap.items():
         if categorie.startswith(key):
             return oid
@@ -112,7 +106,7 @@ def main():
     out = root / "data" / "brondata" / "materials.jsonl"
 
     if not src.exists():
-        print(f"ERROR: materials.csv niet gevonden -> {src}")
+        print(f"ERROR: materialenlijst.csv niet gevonden -> {src}")
         return
 
     omap = load_onderdelen_map(root)
@@ -120,7 +114,7 @@ def main():
     skipped = 0
     written = 0
 
-    with src.open("r", encoding="cp1252", newline="") as f_in, \
+    with src.open("r", encoding="utf-8", newline="") as f_in, \
          out.open("w", encoding="utf-8") as f_out:
 
         reader = csv.DictReader(f_in, delimiter=";")
@@ -136,7 +130,6 @@ def main():
                     value = parse_numeric(value)
                 obj[key] = value
 
-            # Sla rijen zonder categorie over
             categorie = (obj.get("categorie") or "").strip()
             if not categorie:
                 skipped += 1
@@ -146,13 +139,11 @@ def main():
             onderdeel_id = resolve_onderdeel_id(categorie, omap)
             enh = norm_enh(obj.get("enh") or "")
 
-            # CO2: kies de juiste kolom op basis van enh
             if enh == "stuks":
                 co2_value = obj.get("mg_co2_stuk")
             else:
                 co2_value = obj.get("mg_co2_m2")
 
-            # Prijs is al numeriek door parse_numeric
             prijs = obj.get("prijs_norm")
 
             out_obj = {

@@ -1,14 +1,13 @@
 # engine/loader.py
-
+from __future__ import annotations
 import json
 from pathlib import Path
-from typing import Dict, Any, Generator
+from typing import Any, Dict, Generator, Optional
 
 
 def read_jsonl(path: Path) -> Generator[Dict[str, Any], None, None]:
     if not path.exists():
         raise FileNotFoundError(f"Bestand niet gevonden: {path}")
-
     with path.open("r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -18,33 +17,34 @@ def read_jsonl(path: Path) -> Generator[Dict[str, Any], None, None]:
 
 def read_materials_lookup(path: Path) -> Dict[str, Dict[str, Any]]:
     """
-    Maakt een lookup:
-      { material_id: { prijs, mg_co2_m2, mg_co2_stuk, enh } }
+    Lookup: { material_id -> { prijs, co2_value, enh, naam, duurzaam } }
+    Veldnamen conform nieuwe materials.jsonl (gen_csv.py output).
     """
     lookup: Dict[str, Dict[str, Any]] = {}
-
     for m in read_jsonl(path):
-        material_id = m.get("material_id")
-        if not material_id:
+        mid = m.get("material_id")
+        if not mid:
             continue
-
-        lookup[material_id] = {
-            "prijs": float(m.get("prijs_norm") or 0.0),
-            "mg_co2_m2": float(m.get("mg_co2_m2") or 0.0),
-            "mg_co2_stuk": float(m.get("mg_co2_stuk") or 0.0),
-            "enh": (m.get("enh") or "").lower().strip(),
+        lookup[mid] = {
+            "prijs":      float(m.get("prijs")     or 0.0),
+            "co2_value":  float(m.get("co2_value") or 0.0),
+            "enh":        (m.get("enh") or "").lower().strip(),
+            "naam":       m.get("naam"),
+            "duurzaam":   m.get("duurzaam"),
+            "onderdeel_id": m.get("onderdeel_id"),
         }
-
     return lookup
 
 
-def read_gebouw(path: Path, gebouw_id: int) -> Dict[str, Any] | None:
+def read_gebouw(path: Path, gebouw_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
     """
-    Leest gebouwgegevens.jsonl en retourneert het juiste gebouw record.
-    Verwacht structuur zoals:
-      {"gebouw_id":1,"01_m2":22.4,"04_stuks":2,...}
+    Leest gebouwgegevens.json (nieuw formaat met afmetingen + opties).
     """
-    for g in read_jsonl(path):
-        if g.get("gebouw_id") == gebouw_id:
-            return g
-    return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(data, list):
+        if gebouw_id:
+            for g in data:
+                if str(g.get("gebouw_id")) == str(gebouw_id):
+                    return g
+        return data[0] if data else None
+    return data

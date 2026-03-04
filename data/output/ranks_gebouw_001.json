@@ -1,0 +1,314 @@
+{
+  "gebouw_id": "gebouw_001",
+  "totaal_scenarios": 79380,
+  "top10_duurste": [
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41794,
+      "cost_total": 134466.55,
+      "co2_total": 234839.87
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41761,
+      "cost_total": 134306.55,
+      "co2_total": 234839.87
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41797,
+      "cost_total": 134306.55,
+      "co2_total": 234822.27
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41704,
+      "cost_total": 134271.35,
+      "co2_total": 234825.23
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41770,
+      "cost_total": 134146.55,
+      "co2_total": 234812.67
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41788,
+      "cost_total": 134146.55,
+      "co2_total": 234803.87
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41671,
+      "cost_total": 134111.35,
+      "co2_total": 234825.23
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41707,
+      "cost_total": 134111.35,
+      "co2_total": 234807.63
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41791,
+      "cost_total": 133986.55,
+      "co2_total": 234839.87
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 41800,
+      "cost_total": 133986.55,
+      "co2_total": 234767.87
+    }
+  ],
+  "top10_goedkoopste": [
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 11939,
+      "cost_total": 79177.1,
+      "co2_total": 97642.41
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 18869,
+      "cost_total": 79177.1,
+      "co2_total": 97642.41
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 45959,
+      "cost_total": 79177.1,
+      "co2_total": 97563.35
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 52889,
+      "cost_total": 79177.1,
+      "co2_total": 97563.35
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57299,
+      "cost_total": 79177.1,
+      "co2_total": 96799.63
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64229,
+      "cost_total": 79177.1,
+      "co2_total": 96799.63
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 11930,
+      "cost_total": 79337.1,
+      "co2_total": 96948.01
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 11945,
+      "cost_total": 79337.1,
+      "co2_total": 97502.44
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 18860,
+      "cost_total": 79337.1,
+      "co2_total": 96948.01
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 18875,
+      "cost_total": 79337.1,
+      "co2_total": 97502.44
+    }
+  ],
+  "top10_meeste_co2": [
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44113,
+      "cost_total": 130210.65,
+      "co2_total": 240708.55
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44428,
+      "cost_total": 127270.65,
+      "co2_total": 240582.55
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44119,
+      "cost_total": 130370.65,
+      "co2_total": 240568.58
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44116,
+      "cost_total": 130690.65,
+      "co2_total": 240547.85
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44125,
+      "cost_total": 130850.65,
+      "co2_total": 240534.89
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44434,
+      "cost_total": 127430.65,
+      "co2_total": 240442.58
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44431,
+      "cost_total": 127750.65,
+      "co2_total": 240421.85
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44440,
+      "cost_total": 127910.65,
+      "co2_total": 240408.89
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44248,
+      "cost_total": 130015.45,
+      "co2_total": 240303.51
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 44158,
+      "cost_total": 130405.85,
+      "co2_total": 240199.08
+    }
+  ],
+  "top10_minste_co2": [
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57150,
+      "cost_total": 92088.3,
+      "co2_total": 37169.92
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 59670,
+      "cost_total": 95140.95,
+      "co2_total": 37169.92
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64080,
+      "cost_total": 92088.3,
+      "co2_total": 37169.92
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57240,
+      "cost_total": 92283.5,
+      "co2_total": 37184.56
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 59760,
+      "cost_total": 95336.15,
+      "co2_total": 37184.56
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64170,
+      "cost_total": 92283.5,
+      "co2_total": 37184.56
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57147,
+      "cost_total": 92248.3,
+      "co2_total": 37194.72
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 59667,
+      "cost_total": 95300.95,
+      "co2_total": 37194.72
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64077,
+      "cost_total": 92248.3,
+      "co2_total": 37194.72
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57237,
+      "cost_total": 92443.5,
+      "co2_total": 37209.36
+    }
+  ],
+  "top10_optimaal": [
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57291,
+      "cost_total": 90277.1,
+      "co2_total": 38123.23
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64221,
+      "cost_total": 90277.1,
+      "co2_total": 38123.23
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57300,
+      "cost_total": 90117.1,
+      "co2_total": 38817.63
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64230,
+      "cost_total": 90117.1,
+      "co2_total": 38817.63
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57306,
+      "cost_total": 90277.1,
+      "co2_total": 38677.66
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64236,
+      "cost_total": 90277.1,
+      "co2_total": 38677.66
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 57246,
+      "cost_total": 90472.3,
+      "co2_total": 38163.25
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 64176,
+      "cost_total": 90472.3,
+      "co2_total": 38163.25
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 45951,
+      "cost_total": 90277.1,
+      "co2_total": 38886.95
+    },
+    {
+      "gebouw_id": "gebouw_001",
+      "scenario_id": 52881,
+      "cost_total": 90277.1,
+      "co2_total": 38886.95
+    }
+  ]
+}
