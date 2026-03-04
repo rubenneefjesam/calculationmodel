@@ -1,0 +1,22 @@
+{
+  "gebouw_id": "gebouw_001",
+  "meta": {
+    "aantal_woningen": 1
+  },
+  "afmetingen": {
+    "beglazing_m2": 122.0,
+    "gevel_m2": 1017.55,
+    "deuren_stuks": 42,
+    "dak_m2": 97.60,
+    "daktype": "schuin",
+    "vloer_m2": 80.0,
+    "kozijnen_m1": 1094
+  },
+  "opties": {
+    "ventilatie": false,
+    "verwarming": false,
+    "verwarming_voorkeur": null,
+    "zonnepanelen": false,
+    "panelen": false
+  }
+}

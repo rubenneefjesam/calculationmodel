@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gebouw_schema.json",
+  "title": "Gebouw invoerschema",
+  "description": "Schema voor gebouwinvoer t.b.v. scenario-berekeningen. Bevat validatieregels en frontend-condities.",
+  "type": "object",
+  "required": ["gebouw_id", "meta", "afmetingen", "opties"],
+
+  "properties": {
+
+    "gebouw_id": {
+      "type": "string",
+      "description": "Unieke identifier voor het gebouw",
+      "pattern": "^[a-zA-Z0-9_-]+$",
+      "examples": ["gebouw_001", "project_amsterdam_01"]
+    },
+
+    "meta": {
+      "type": "object",
+      "description": "Metadata over het gebouw",
+      "required": ["aantal_woningen"],
+      "properties": {
+        "aantal_woningen": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Aantal woningen of appartementen in het gebouw",
+          "ui:label": "Aantal woningen / appartementen",
+          "ui:order": 1
+        }
+      }
+    },
+
+    "afmetingen": {
+      "type": "object",
+      "description": "Fysieke afmetingen van de gebouwonderdelen",
+      "required": [
+        "beglazing_m2",
+        "gevel_m2",
+        "deuren_stuks",
+        "dak_m2",
+        "daktype",
+        "vloer_m2",
+        "kozijnen_m1"
+      ],
+      "properties": {
+
+        "beglazing_m2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Totaal beglazingsoppervlak",
+          "ui:label": "Beglazing (m²)",
+          "ui:enh": "m2",
+          "ui:order": 1
+        },
+
+        "gevel_m2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Totaal geveloppervlak te isoleren",
+          "ui:label": "Gevelisolatie (m²)",
+          "ui:enh": "m2",
+          "ui:order": 2
+        },
+
+        "deuren_stuks": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Aantal deuren",
+          "ui:label": "Deuren (stuks)",
+          "ui:enh": "stuks",
+          "ui:order": 3
+        },
+
+        "dak_m2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Totaal dakoppervlak. Wordt gebruikt voor dakisolatie, panelen en zonnepanelen.",
+          "ui:label": "Dakoppervlak (m²)",
+          "ui:enh": "m2",
+          "ui:order": 4
+        },
+
+        "daktype": {
+          "type": "string",
+          "enum": ["schuin", "plat"],
+          "description": "Type dak. Bepaalt welke dakisolatiematerialen worden meegenomen in scenario's.",
+          "ui:label": "Daktype",
+          "ui:widget": "radio",
+          "ui:order": 5
+        },
+
+        "vloer_m2": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Vloeroppervlak te isoleren",
+          "ui:label": "Vloerisolatie (m²)",
+          "ui:enh": "m2",
+          "ui:order": 6
+        },
+
+        "kozijnen_m1": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Totale lengte kozijnen in lopende meters",
+          "ui:label": "Kozijnen (m¹)",
+          "ui:enh": "m1",
+          "ui:order": 7
+        }
+      }
+    },
+
+    "opties": {
+      "type": "object",
+      "description": "Boolean opties die bepalen welke onderdelen worden meegenomen in scenario's",
+      "required": ["ventilatie", "verwarming", "zonnepanelen", "panelen"],
+      "properties": {
+
+        "ventilatie": {
+          "type": "boolean",
+          "description": "Ventilatie meenemen in scenario's",
+          "ui:label": "Ventilatie",
+          "ui:widget": "toggle",
+          "ui:order": 1
+        },
+
+        "verwarming": {
+          "type": "boolean",
+          "description": "Verwarming meenemen in scenario's",
+          "ui:label": "Verwarming",
+          "ui:widget": "toggle",
+          "ui:order": 2
+        },
+
+        "verwarming_voorkeur": {
+          "type": ["string", "null"],
+          "enum": ["ketel", "warmtepomp", "stadsverwarming", null],
+          "default": null,
+          "description": "Voorkeur voor type verwarming. Null = alle types worden meegenomen.",
+          "ui:label": "Voorkeur verwarmingstype",
+          "ui:widget": "select",
+          "ui:options": [
+            { "value": null,              "label": "Geen voorkeur (alle types)" },
+            { "value": "ketel",           "label": "Ketel" },
+            { "value": "warmtepomp",      "label": "Warmtepomp" },
+            { "value": "stadsverwarming", "label": "Stadsverwarming" }
+          ],
+          "ui:condition": { "field": "opties.verwarming", "equals": true },
+          "ui:order": 3
+        },
+
+        "zonnepanelen": {
+          "type": "boolean",
+          "description": "Zonnepanelen meenemen in scenario's. Aantal wordt berekend als dak_m2 ÷ paneel_m2.",
+          "ui:label": "Zonnepanelen",
+          "ui:widget": "toggle",
+          "ui:order": 4
+        },
+
+        "panelen": {
+          "type": "boolean",
+          "description": "Gevelbekledingspanelen meenemen in scenario's. Aantal wordt berekend als dak_m2 ÷ paneel_m2.",
+          "ui:label": "Panelen (gevelbekleding)",
+          "ui:widget": "toggle",
+          "ui:order": 5
+        }
+      },
+
+      "if": {
+        "properties": { "verwarming": { "const": false } }
+      },
+      "then": {
+        "properties": {
+          "verwarming_voorkeur": { "const": null }
+        }
+      }
+    }
+  },
+
+  "constants": {
+    "description": "Vaste technische waarden gebruikt in berekeningen",
+    "paneel_m2_per_stuk": {
+      "value": 1.7,
+      "description": "Dakoppervlak per paneel of zonnepaneel in m². dak_m2 ÷ 1.7 = aantal stuks.",
+      "ui:label": "m² per paneel"
+    }
+  },
+
+  "scenario_mapping": {
+    "description": "Koppeling tussen gebouwvelden en materialencategorieën",
+    "regels": [
+      {
+        "categorie": "Beglazing",
+        "veld": "afmetingen.beglazing_m2",
+        "enh": "m2",
+        "altijd_actief": true
+      },
+      {
+        "categorie": "Gevelisolatie",
+        "veld": "afmetingen.gevel_m2",
+        "enh": "m2",
+        "altijd_actief": true
+      },
+      {
+        "categorie": "Deuren",
+        "veld": "afmetingen.deuren_stuks",
+        "enh": "stuks",
+        "altijd_actief": true
+      },
+      {
+        "categorie": "Hellend dakisolatie",
+        "veld": "afmetingen.dak_m2",
+        "enh": "m2",
+        "conditie": { "field": "afmetingen.daktype", "equals": "schuin" }
+      },
+      {
+        "categorie": "Plat dakisolatie",
+        "veld": "afmetingen.dak_m2",
+        "enh": "m2",
+        "conditie": { "field": "afmetingen.daktype", "equals": "plat" }
+      },
+      {
+        "categorie": "Vloerisolatie",
+        "veld": "afmetingen.vloer_m2",
+        "enh": "m2",
+        "altijd_actief": true
+      },
+      {
+        "categorie": "Kozijnen",
+        "veld": "afmetingen.kozijnen_m1",
+        "enh": "m1",
+        "altijd_actief": true
+      },
+      {
+        "categorie": "Panelen",
+        "veld": "afmetingen.dak_m2",
+        "enh": "stuks",
+        "berekening": "dak_m2 / constants.paneel_m2_per_stuk",
+        "conditie": { "field": "opties.panelen", "equals": true }
+      },
+      {
+        "categorie": "Ventilatie",
+        "veld": null,
+        "enh": "stuks",
+        "waarde_vast": 1,
+        "conditie": { "field": "opties.ventilatie", "equals": true }
+      },
+      {
+        "categorie": "Verwarming - Ketel",
+        "veld": null,
+        "enh": "stuks",
+        "waarde_vast": 1,
+        "conditie": {
+          "and": [
+            { "field": "opties.verwarming", "equals": true },
+            { "field": "opties.verwarming_voorkeur", "in": [null, "ketel"] }
+          ]
+        }
+      },
+      {
+        "categorie": "Verwarming - Warmtepomp",
+        "veld": null,
+        "enh": "stuks",
+        "waarde_vast": 1,
+        "conditie": {
+          "and": [
+            { "field": "opties.verwarming", "equals": true },
+            { "field": "opties.verwarming_voorkeur", "in": [null, "warmtepomp"] }
+          ]
+        }
+      },
+      {
+        "categorie": "Stadsverwarming",
+        "veld": null,
+        "enh": "stuks",
+        "waarde_vast": 1,
+        "conditie": {
+          "and": [
+            { "field": "opties.verwarming", "equals": true },
+            { "field": "opties.verwarming_voorkeur", "in": [null, "stadsverwarming"] }
+          ]
+        }
+      },
+      {
+        "categorie": "Zonne-energie",
+        "veld": "afmetingen.dak_m2",
+        "enh": "stuks",
+        "berekening": "dak_m2 / constants.paneel_m2_per_stuk",
+        "conditie": { "field": "opties.zonnepanelen", "equals": true }
+      }
+    ]
+  }
+}

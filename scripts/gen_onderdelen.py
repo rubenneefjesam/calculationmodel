@@ -15,7 +15,7 @@ def norm_enh(enh: str) -> str:
 def main():
     root = Path(__file__).resolve().parents[1]
 
-    src = root / "data" / "brondata" / "materials.csv"
+    src = root / "data" / "brondata" / "materialenlijst.csv"
     out = root / "data" / "brondata" / "onderdelen.jsonl"
 
     if not src.exists():
@@ -38,7 +38,6 @@ def main():
 
             cat_to_enh.setdefault(cat, set())
 
-            # enh is optioneel; maar als het er is, opslaan
             if enh:
                 cat_to_enh[cat].add(enh)
 
@@ -49,7 +48,7 @@ def main():
             onderdeel = {
                 "onderdeel_id": str(i).zfill(2),
                 "categorie": cat,
-                "enh": sorted(cat_to_enh[cat])  # lijst
+                "enh": sorted(cat_to_enh[cat])
             }
             f_out.write(json.dumps(onderdeel, ensure_ascii=False) + "\n")
 

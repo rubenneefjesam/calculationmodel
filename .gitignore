@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .venv/
+
+# gegenereerde output (grote bestanden)
+data/output/scenarios.jsonl

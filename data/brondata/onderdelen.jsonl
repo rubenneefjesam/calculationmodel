@@ -3,10 +3,12 @@
 {"onderdeel_id": "03", "categorie": "Deuren", "enh": ["stuks"]}
 {"onderdeel_id": "04", "categorie": "Gevelisolatie", "enh": ["m2"]}
 {"onderdeel_id": "05", "categorie": "Hellend dakisolatie", "enh": ["m2"]}
-{"onderdeel_id": "06", "categorie": "Kozijnen/Draaiend deel", "enh": ["stuks"]}
+{"onderdeel_id": "06", "categorie": "Kozijnen", "enh": ["stuks"]}
 {"onderdeel_id": "07", "categorie": "Panelen", "enh": ["stuks"]}
 {"onderdeel_id": "08", "categorie": "Plat dakisolatie", "enh": ["m2"]}
-{"onderdeel_id": "09", "categorie": "Ventilatie", "enh": ["stuks"]}
-{"onderdeel_id": "10", "categorie": "Verwarming", "enh": ["stuks"]}
-{"onderdeel_id": "11", "categorie": "Vloerisolatie", "enh": ["m2"]}
-{"onderdeel_id": "12", "categorie": "Zonne-energie", "enh": ["stuks"]}
+{"onderdeel_id": "09", "categorie": "Stadsverwarming", "enh": ["stuks"]}
+{"onderdeel_id": "10", "categorie": "Ventilatie", "enh": ["stuks"]}
+{"onderdeel_id": "11", "categorie": "Verwarming - Ketel", "enh": ["stuks"]}
+{"onderdeel_id": "12", "categorie": "Verwarming - Warmtepomp", "enh": ["stuks"]}
+{"onderdeel_id": "13", "categorie": "Vloerisolatie", "enh": ["m2"]}
+{"onderdeel_id": "14", "categorie": "Zonne-energie", "enh": ["stuks"]}
