@@ -66,11 +66,17 @@ with st.sidebar:
         st.divider()
         st.markdown("**Ranking type**")
         ranking_keuze = st.radio(
-            "",
-            ["Optimaal", "Goedkoopste", "Duurste", "Minste CO₂", "Meeste CO₂"],
-            label_visibility="collapsed",
-        )
+    "Ranking type",
+    ["Optimaal", "Goedkoopste", "Duurste", "Minste CO₂", "Meeste CO₂"],
+    label_visibility="collapsed",
+)
         top_n = st.select_slider("Top N", options=[10, 20, 50, 100], value=20)
+
+    st.divider()
+    st.markdown("**Opties**")
+    min_duurzaam = st.slider("Min duurzaam (%)", 0, 100, 0, step=10, format="%d%%")
+    st.toggle("Verwarming meenemen", value=True, disabled=True)
+    st.toggle("Zonnepanelen meenemen", value=False, disabled=True)
 
 
 # ── Pagina routing ───────────────────────────────────────────────────────────
