@@ -4,4 +4,4 @@ __pycache__/
 .venv/
 
 # gegenereerde output (grote bestanden)
-data/output/scenarios.jsonl
+data/output/scenarios.jsonldata/output/scenarios.jsonl
